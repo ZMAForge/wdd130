@@ -1,0 +1,31 @@
+body{
+    text-align: center;
+    background-color: ivory;
+    color: darkslateblue;
+}
+
+img{
+    Max-width: 800px;
+    border: 10px solid steelblue;
+}
+
+nav{
+    background-color: steelblue;
+    padding: 15px;
+    
+}
+a{
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+}
+
+h1{
+    color: steelblue;
+}
+
+footer{
+    background-color: steelblue;
+    color: white;
+    padding: 2px;
+}
