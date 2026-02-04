@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: auto;
+    border: 5px solid white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    background-color: #008db1;
+    border-radius: 10px;
+    border: 5px solid #004e63;
+    justify-items: center;
+    max-width: fit-content;
+    text-align: center;
+    padding: 2em 1em;
+}
+
+section img {
+    justify-content: center;
+}
+
+h1 {
+    color: #fffffe;
+    font-family: helvetica, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    color:#91e4fb;
+    font-family: helvetica;
+    padding: 2em;
+}
+ul {
+    color: #fffffe;
+    font-family: helvetica;
+    padding: 1em;
+}
+blockquote {
+    padding: 1em;
+    color: #ffd783;
+    font-family: 'Brush Script MT', 'Nanum Brush Script', Helvetica;
+}
