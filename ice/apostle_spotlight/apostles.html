@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostles Spotlights</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: #e8eced;
+            font-family: arial;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #apostle-card {
+            height: 700px;
+            width: 800px;
+            background-image: url("images/christus.webp");
+            background-size: cover;
+            background-position: center;
+            border: 4px solid black;
+            border-radius: 5%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        #apostle-card img {
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .twelve {
+            width: 75%;
+            margin: 0 auto;
+             display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        #prophet {
+            width: 150px;
+            height: 150px;
+        }
+
+        .med-img {
+            width: 125px;
+            height: 125px;
+        }
+
+        .small-img {
+            height: 100px;
+            width: 100px;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0px;
+        }
+
+        .first-presidency {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        h2 {
+            display:flex;
+            justify-content: center;
+            margin: 20px 0px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="apostle-card">
+        <h1>First Presidency</h1>
+        <div class="first-presidency">
+            <img class="med-img" src="images/eyring.webp" alt="President Henry B. Eyring">
+            <img id="prophet" src="images/oaks.webp" alt="President Dallin H.Oaks">
+            <img class="med-img" src="images/christofferson.webp" alt="President D. Todd Christofferson">
+        </div>
+
+        <h2>Quorum of the Twelve Apostles</h2>
+        <div class="twelve">
+            <img class="small-img" src="images/uchtdorf.webp" alt="Dieter F. Uchtdorf">
+            <img class="small-img" src="images/bednar.webp" alt="David A. Bednar">
+            <img class="small-img" src="images/cook.webp" alt="Quentin L. Cook">
+            <img class="small-img" src="images/anderson.webp" alt="Neil L. Anderson">
+            <img class="small-img" src="images/rasband.webp" alt="Ronald A. Rasband">
+            <img class="small-img" src="images/stevenson.webp" alt="Gary E. Stevenson">
+            <img class="small-img" src="images/renlund.webp" alt="Dale G. Renlund">
+            <img class="small-img" src="images/gong.webp" alt="Gerrit W. Gong">
+            <img class="small-img" src="images/soares.webp" alt="Ulisses Soares">
+            <img class="small-img" src="images/kearon.webp" alt="Patrick Kearon">
+            <img class="small-img" src="images/causse.webp" alt="Gerald Causse">
+            <img class="small-img" src="https://placehold.co/100x100" alt="Placeholder">
+        </div>
+    </div>
+</body>
+</html>
