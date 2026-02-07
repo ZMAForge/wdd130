@@ -37,6 +37,9 @@ nav a {
 
 nav a:hover {
     background-color: #3488a0;
+    padding: 45px 30px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 main section img {
@@ -189,7 +192,7 @@ h4 {
 }
 
 .icon {
-    padding-top: 1px;
+    padding-top: 20px;
 }
 
 #logo_link {
@@ -233,12 +236,21 @@ footer p a:hover {
 
 footer .social img {
     padding-top: 15px;
+
+}
+
+.social {
+    display: flex;
+    gap: 10px;
 }
 
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
         height: auto;
+    }
+    .logo {
+        width:110%;
     }
     nav, footer {
         flex-direction: column;
