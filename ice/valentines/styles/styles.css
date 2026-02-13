@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: palevioletred;
+}
+.courgette-regular {
+  font-family: "Courgette", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mouse-memoirs-regular {
+  font-family: "Mouse Memoirs", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+nav{
+    display: flex;
+    justify-content: right;
+}
+
+ul {
+    padding-right: 2em;
+}
+
+body {
+    background-color: pink;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+main h1 {
+    text-align:center;
+}
+
+h1 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-family: "Courgette", cursive;
+}
+
+img {
+    border: 5px solid white;
+    max-width: 100%;
+    height: auto;
+    grid-column: 1/2;
+    grid-row: 1/5;
+    border-radius: 15px;
+}
+
+h2 {
+    padding-bottom: 1em;
+    font-family: "Courgette", cursive;
+}
+
+p {
+    font-family: "Mouse Memoirs", sans-serif;
+}
+
+section:first-of-type {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+section:nth-of-type {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+section:last-of-type {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+footer {
+    background-color: palevioletred;
+    padding-bottom: 5em;
+}
