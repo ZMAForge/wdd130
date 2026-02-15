@@ -25,21 +25,20 @@ header {
 }
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: right;
+    align-items: center;
 }
 
 nav a {
-    text-align: center;
     color: white;
     text-decoration: none;
-    padding-top: 50px;
+    padding: 1em;
 }
 
 nav a:hover {
     background-color: #3488a0;
-    padding: 45px 30px;
     border-radius: 5px;
-    text-align: center;
+    padding: 1em;
 }
 
 main section img {
