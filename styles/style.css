@@ -7,7 +7,7 @@
 
 img {
     max-width: 100%;
-    max-height: auto; 
+    max-height: auto;
 }
 
 
@@ -208,6 +208,7 @@ footer .logo img {
     display: flex;
     justify-content: space-evenly;
     margin-top: 2.5em;
+    object-fit: cover; 
 }
 #social img {
     border-radius: 50%;
