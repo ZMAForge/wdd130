@@ -217,4 +217,49 @@ footer .logo img {
 #social img:hover {
     border-color: #8a6ec7;
 }
-
+/* CSS for ICE page starts here */
+#main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    margin: 1em;
+}
+#main h1 {
+    color: beige;
+    grid-column: 1/4;
+    text-align: center;
+}
+.card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border: 5px solid #6a4fa3;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+}
+#valentines img {
+    width: 350px;
+}
+.card {
+    background-color: #8a6ec7;
+    border: 5px solid #6a4fa3;
+    border-radius: 15px;
+    padding: 1em;
+    max-width: 450px;
+}
+.card section {
+    display: grid;
+    grid-template-rows: 3fr, 1fr, 2fr;
+}
+.card p {
+    margin-top: 1em;
+}
+.card h3 {
+    margin-top: 1em;
+    color: #6a4fa3;
+}
+.card h3:hover {
+    color:#563e8a;
+}
