@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feed Sign Up</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: rgb(120, 96, 64);  
+        }
+
+        img {
+            max-width: 100%
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-align: center;
+        }
+        #formContainer {
+            background-color: white;
+            position: relative;
+            width: 550px;
+            margin: 0 auto; /*This automatically centers the container */
+            border: 10px solid #1a3474;
+            border-radius: 20px;
+            overflow: hidden; /*It clips things that go outside of its space. Because curved border the child element also needs overflow*/
+        }
+
+        #closeBtn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #banner {
+            width: 100%;
+            height: 175px;
+            overflow: hidden; /*So all the bits of the photo that are over 175px get cut?*/
+        }
+
+         /*I did not know you could refer to multiple objects stacked like this*/
+        #banner h1,
+        #banner h2 { 
+            color: white;
+            text-shadow: 2px 2px 4px black;
+            z-index: 1; /*It looked hidden because it was WAY below the form for some reason.*/
+        }
+
+        #banner h1 {
+            margin-top: -260px;
+        }
+
+        #formContainer h3 {
+            margin: 1em; /*Added space around SignUp*/
+        }
+
+        #myForm {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /*Makes two columns*/
+            padding: 1em; /*spacing around entire form*/
+            gap: 1em;/*spacing between columns*/
+        }
+
+        /*the checkboxes and the submit button being affected here*/
+        #myForm section {
+            grid-column: 1/3;
+            text-align: center; /*Allows content to essentially ignore the grid and be placed in the center*/
+        }
+
+        #myForm button {
+            padding: 2px 5px;
+        }
+
+        /*No references this point forward. All is Zelda code*/
+        #books {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 10px;
+        }
+
+        #books img {
+            width: 18%;
+            height: auto;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+        
+        <div id="formContainer">
+            <div id="banner">
+                <img src="images/jesus_feeds_5000.jpeg" alt="Photo of Jesus Christ">
+                <h1>Daily Feed</h1>
+                <h2>Scripture a Day</h2>
+            </div>
+            <h3>Sign Up for Daily Scripture Feed</h3>
+            <form id="myForm">
+                <button type="button" id="closeBtn">X</button>
+                <label for="username">User Name:</label>
+                <input type="text" id="username" name="username" required>
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label>Gender:</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+    
+                <section>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to newsletter</label>
+                </section>
+    
+                <section>
+                    <input type="checkbox" id="conditions" name="conditions" required>
+                    <label for="conditions">I acknowledge the terms and conditions</label>
+                </section>
+    
+                <section>
+                    <button type="submit">Submit</button>
+                </section>
+            </form>
+            <div id="books">
+                <img src="images/old_testament.webp" alt="">
+                <img src="images/new_testament.webp" alt="">
+                <img src="images/book_of_mormon.webp" alt="">
+                <img src="images/doctrine_and_covenants.webp" alt="">
+                <img src="images/pearl_of_great_price.webp" alt="">
+            </div>
+        </div>
+    
+        <div id="output"></div>
+    </div>
+    <script>
+        // Here is some Javascript to start looking forward to wdd131
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("formContainer").style.display = "none";
+         });
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop form from actually submitting
+
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                }
+            }
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+                });
+    </script>
+
+</body>
+
+</html>
