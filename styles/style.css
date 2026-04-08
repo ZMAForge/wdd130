@@ -263,3 +263,38 @@ footer .logo img {
 .card h3:hover {
     color:#563e8a;
 }
+
+#reflect-h1 {
+    text-align: center;
+    color: white;
+    margin-top: 2em;
+}
+.reflect-card {
+    color:#e6d9c6;
+    margin: 2em;
+    text-align: center;
+}
+
+.reflect-card h3{
+    color:#658ac1;
+    margin: 1em;
+}
+
+.reflect-card a {
+    padding: 1em;
+    color:#e6d9c6;
+    background-image: linear-gradient(to right, #563e8a, #658ac1);
+    border-radius: 15px;
+}
+
+.reflect-card h2 {
+    color: #6a4fa3;
+}
+
+.reflect-card u {
+    text-decoration: underline;
+}
+
+.reflect-card p {
+    margin: 10px;
+}
